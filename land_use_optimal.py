@@ -373,7 +373,6 @@ def government_agent(factors_package, main_package, parameter_package, limit_pac
             rural_boost = (len(np.where(land_use_decision == land_use_code_package["rural"])[0]) - rural_pri)
             city_boost = (len(np.where(land_use_decision == land_use_code_package["urban"])[0]) - city_pri)
             region_data_package[item_r]["land_use"] = land_use_decision
-            print("农村新增:" + str(rural_boost), "城市新增:" + str(city_boost))
         result_y = group_package(main_package, parameter_package, region_data_package)
         cc = str(item_y)
         profile_agent = parameter_list["raster_profile"]
